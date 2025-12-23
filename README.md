@@ -6,7 +6,17 @@ This repository provides the implementation used in the paper:
 “ Facial micro-emotion recognition using harris hawk optimization-based micro-expression transformer and deep learning classifier.”
 
 This project aimed to develop a comprehensive pipeline for micro-expression analysis, involving hybrid feature extraction (HOG, LBP, SIFT), dimension reduction, deep feature learning with a dual-input transformer, and multi-class emotion classification using a Deep Convolutional Deep Belief Network (DC-DBN).
-Key Stages and Achievements:
+Dataset Information
+This work uses three publicly available datasets:
+- CASME II
+- SAMM
+- CAS(ME)²
+Due to license restrictions, datasets are not redistributed and must be obtained
+from their original sources.
+  Code Information:
+  The code includes data loading and preprocessing, traditional feature extraction, Dimensionality Reduction and feature selection,Dual-Input Transformer Model Tuning and Deep Feature Extraction, model training,
+evaluation, and ablation experiments.
+User Instructions:
 1. Image Data Loading and Preprocessing:
 •	Images from the dataset were successfully loaded.
 •	A corresponding annotation file was loaded to retrieve multi-class emotion labels: "Tense," "Happiness," "Repression," "Disgust," "Surprise," and "Contempt."
@@ -38,4 +48,19 @@ o	Precision (weighted): 0.9210
 o	Recall (weighted): 0.9160
 o	F1-Score (weighted): 0.9126
 •	Performance for individual classes was strong, with perfect F1-scores for 'surprise,' 'contempt,' and 'happiness,' while 'disgust' showed comparatively lower recall (0.50), suggesting it's a more challenging class.
+
+Requirements
+Python 3.x
+TensorFlow / PyTorch
+NumPy, OpenCV, Scikit-learn, Matplotlib
+
+Methodology
+The system performs preprocessing, feature extraction, optimization using HHO,
+classification using DC-DBN, and evaluation using standard metrics.
+
+Citations
+Please cite the original dataset papers when using CASME II, SAMM, or CAS(ME)².
+
+License
+This code is provided for academic and non-commercial research purposes only.
 
